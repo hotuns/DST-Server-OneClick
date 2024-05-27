@@ -19,6 +19,13 @@
 **使用方法:**
 
 1. 将此存储库克隆到您的服务器。
-2. 运行安装脚本：`./setup_dst_server.sh`。
-3. 按屏幕上的指示配置您的服务器。
-4. 启动服务器，享受游戏！
+2.  位置设置（可选）
+
+   ```sh
+   steamcmd_dir="$HOME/steamcmd"  # steamcmd保存位置
+   install_dir="$HOME/dontstarvetogether_dedicated_server" # 饥荒服务器保存位置
+   dontstarve_dir="$HOME/.klei/DoNotStarveTogether" # 存档保存位置
+   ```
+3. 运行安装脚本：`./setup_dst_server.sh`。
+4. 按屏幕上的指示配置您的服务器。
+5. 启动服务器，享受游戏！
