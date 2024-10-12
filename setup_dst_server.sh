@@ -17,7 +17,7 @@ function check_for_file()
 	fi
 }
 
-script_dir = `pwd`
+script_dir=`pwd`
 
 cd "$steamcmd_dir" || fail "Missing $steamcmd_dir directory!"
 
