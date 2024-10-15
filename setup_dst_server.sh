@@ -17,7 +17,7 @@ function check_for_file()
 	fi
 }
 
-script_dir = `pwd`
+script_dir=`pwd`
 
 cd "$steamcmd_dir" || fail "Missing $steamcmd_dir directory!"
 
@@ -108,9 +108,10 @@ check_for_file "$dontstarve_dir/$cluster_name/Caves/server.ini"
 
 check_for_file "$install_dir/bin64"
 
-cd "$install_dir/bin64" || fail
-
-run_shared=(./dontstarve_dedicated_server_nullrenderer_x64)
+cd "$install_dir/bin" || fail
+# 如果报错libcurl-gnutls.so.4缺失
+# ln -s /usr/lib/libcurl.so.4 $HOME/dontstarvetogether_dedicated_server/bin/lib32/libcurl-gnutls.so.4
+run_shared=(./dontstarve_dedicated_server_nullrenderer)
 run_shared+=(-console)
 run_shared+=(-cluster "$cluster_name")
 run_shared+=(-monitor_parent_process $$)
